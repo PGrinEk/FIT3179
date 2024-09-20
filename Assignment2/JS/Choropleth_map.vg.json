@@ -5,7 +5,7 @@
     "height": 400,
     "projection": {"type": "equalEarth"},
     "data": {
-      "url": "https://github.com/PGrinEk/FIT3179/blob/main/Assignment2/JS/SA3_2021_AUST_GDA94.json",
+      "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/main/Assignment2/JS/SA3_2021_AUST_GDA94.json",
       "format": {"type": "topojson", "feature": "SA3_2021_AUST_GDA94"}
     },
     "transform": [
@@ -13,7 +13,7 @@
         "lookup": "properties.SA3_NAME21",
         "from": {
           "data": {
-            "url": "https://github.com/PGrinEk/FIT3179/blob/main/Assignment2/Data/SA3%20Table.csv"
+            "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/main/Assignment2/Data/SA3%20Table.csv"
           },
           "key": "SA3 Names",
           "fields": ["Total"]
