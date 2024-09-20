@@ -1,0 +1,36 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Permenant Migrants In Australia",
+    "width": 800,
+    "height": 400,
+    "projection": {"type": "equalEarth"},
+    "data": {
+      "url": "https://github.com/PGrinEk/FIT3179/blob/main/Assignment2/JS/SA3_2021_AUST_GDA94.json",
+      "format": {"type": "topojson", "feature": "SA3_2021_AUST_GDA94"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.SA3_NAME21",
+        "from": {
+          "data": {
+            "url": "https://github.com/PGrinEk/FIT3179/blob/main/Assignment2/Data/SA3%20Table.csv"
+          },
+          "key": "SA3 Names",
+          "fields": ["Total"]
+        }
+      },
+      {"calculate": "datum.Total + 0.1", "as": "Total Permenant Migrants"}
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "Total Permenant Migrants",
+        "type": "quantitative",
+        "scale": {"type": "log"}
+      },
+      "tooltip": [
+        {"field": "properties.SA3_Names21", "type": "nominal", "title": "Area"},
+        {"field": "Total", "type": "quantitative"}
+      ]
+    }
+}
