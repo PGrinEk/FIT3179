@@ -1,9 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Permenant Migrants In Australia",
-    "width": 800,
+    "title": "The Spread of Permenant Migrants in Australia",
+    "width": 600,
     "height": 400,
-    "projection": {"type": "equalEarth"},
+    "projection": {"type": "mercator"},
     "data": {
       "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/main/Assignment2/JS/SA3_2021_AUST_GDA94.json",
       "format": {"type": "topojson", "feature": "SA3_2021_AUST_GDA94"}
@@ -19,18 +19,22 @@
           "fields": ["Total"]
         }
       },
-      {"calculate": "datum.Total + 0.1", "as": "Total Permenant Migrants"}
+      {"calculate": "datum.Total", "as": "Total Permenant Migrants"}
     ],
     "mark": {"type": "geoshape"},
     "encoding": {
       "color": {
         "field": "Total Permenant Migrants",
         "type": "quantitative",
-        "scale": {"type": "log"}
+        "scale": {
+              "type": "threshold",
+              "domain": [1000, 5000, 10000, 15000, 20000],
+              "range": ["#edf8e9", "#bae4b3", "#74c476", "#31a354", "#006d2c"]
+        }
       },
       "tooltip": [
-        {"field": "properties.SA3_Names21", "type": "nominal", "title": "Area"},
-        {"field": "Total", "type": "quantitative"}
+        {"field": "properties.SA3_NAME21", "type": "nominal", "title": "Area"},
+        {"field": "Total", "type": "quantitative", "title": "Total Migrants"}
       ]
     }
-}
+  }
