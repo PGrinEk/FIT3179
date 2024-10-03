@@ -1,17 +1,9 @@
-﻿Visa,Gender,Count,Percentage,,,
-Skilled,Male," 925,667 ",52.6,,,
-Skilled,Female," 835,371 ",47.4,,,
-Family,Male," 348,218 ",36.2,,,
-Family,Female," 614,134 ",63.8,,,
-Humanitarian,Male," 148,519 ",52.4,,,
-Humanitarian,Female," 135,036 ",47.6,,,
-Total,Male," 1,423,041 ",47.3,,,
-Total,Female," 1,585,143 ",52.7,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
+﻿Visa,Gender,Count,Percentage
+Skilled,Male,925667,52.6
+Skilled,Female,835371,47.4
+Family,Male,348218,36.2
+Family,Female,614134,63.8
+Humanitarian,Male,148519,52.4
+Humanitarian,Female,135036,47.6
+Total,Male,1423041,47.3
+Total,Female,1585143,52.7
