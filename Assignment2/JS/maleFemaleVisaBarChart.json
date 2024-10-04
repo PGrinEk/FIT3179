@@ -58,17 +58,7 @@
           {"field": "Gender", "type": "nominal", "title": "Gender"},
           {"field": "Count", "type": "quantitative", "title": "Num Migrants"},
           {"field": "Percentage", "type": "quantitative", "title": "%"}
-        ],
-        "config": {
-          "tooltip": {
-            "fill": "#f9f9f9",
-            "stroke": "#ccc",
-            "strokeWidth": 1,
-            "fontSize": 14,
-            "fontWeight": "bold",
-            "color": "#333"
-          }
-        }
+        ]
       }
     },
     {
