@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 450,
+    "height": 300,
+    "data": {
+        "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/refs/heads/main/Assignment2/Data/VisaTypeOverTime.csv"
+    },
+            "mark": "area",
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "type": "temporal",
+                    "axis": {"labelAngle": 0},
+                    "title": "Year"
+                },
+                "y": {
+                    "aggregate": "sum",
+                    "field": "Total",
+                    "type": "quantitative",
+                    "title": "Total Migrants",
+                    "axis": {
+                        "grid": false,
+                        "tickCount": 10
+                    }
+                },
+                "color": {
+                    "field": "Visa",
+                    "type": "nominal",
+                    "scale": {
+                        "domain": ["Skilled", "Family", "Humanitarian"],
+                        "range": ["#99d8c9", "#41ae76", "#238b45"]
+                    },
+                    "title": "Visa Types"
+                },
+                "tooltip": [
+                    {"field": "Visa", "type": "nominal", "title": "Visa Type"},
+                    {"field": "Total", "type": "quantitative", "title": "Migrants in Visa Type"},
+                    {"field": "Count", "type": "quantitative", "title": "Total Migrants in Year"},
+                    {"field": "Year", "type": "temporal", "title": "Year"}
+                ]
+            },
+            "config": {
+                "area": {
+                    "interpolate": "natural",
+                    "opacity": 0.9
+                }
+            } 
+    
+}

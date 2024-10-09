@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 450,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/refs/heads/main/Assignment2/Data/ageVisaType.csv"
+    },
+    "transform": [
+      {
+        "filter": {
+          "selection": "ageSelect"
+        }
+      }
+    ],
+    "layer": [
+      {
+        "mark": {
+          "type": "bar",
+          "width": 100
+        },
+        "params":[
+          {
+            "name": "ageSelect",
+            "select": {"type": "point", "fields": ["Age Group"]},
+            "bind": "legend"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "Visa",
+            "type": "nominal",
+            "axis": {"labelAngle": 0},
+            "title": "Visa Type"
+          },
+          "y": {
+            "field": "Percentage",
+            "type": "quantitative",
+            "title": "%",
+            "scale": {
+              "domain": [0, 100]
+            }
+          },
+          "color": {
+            "field": "Age Group",
+            "type": "nominal",
+            "scale": {
+              "domain": ["0-19","20-29","30-39","40-49","50-59","60+"],
+              "range": ["#e5f5f9", "#ccece6", "#99d8c9", "#66c2a4", "#41ae76", "#238b45"]
+            },
+            "title": "Age Groups"
+          },
+          "yOffset": {
+            "field": "Age Groups",
+            "type": "nominal"
+          },
+          "tooltip": [
+            {"field": "Age Group", "type": "nominal", "title": "Age Group"},
+            {"field": "Count", "type": "quantitative", "title": "Num Migrants"},
+            {"field": "Percentage", "type": "quantitative", "title": "%"}
+          ]
+        }
+      }
+    ]
+}
+  
