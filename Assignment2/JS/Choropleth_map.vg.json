@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "The Spread of Permanent Migrants in Australia",
     "width": 600,
     "height": 400,
     "projection": {"type": "mercator"},
