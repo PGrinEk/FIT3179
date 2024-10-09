@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 450,
   "height": 300,
-  "title": "Male vs Female Migrants - Visa Type",
   "data": {
     "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/refs/heads/main/Assignment2/Data/genderVisaType.csv"
   },
