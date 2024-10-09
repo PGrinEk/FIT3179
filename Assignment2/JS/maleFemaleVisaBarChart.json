@@ -16,7 +16,7 @@
     {
       "mark": {
         "type": "bar",
-        "width": 50
+        "width": 35
       },
       "params":[
         {
