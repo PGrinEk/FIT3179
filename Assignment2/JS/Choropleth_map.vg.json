@@ -4,7 +4,7 @@
     "height": 400,
     "projection": {"type": "mercator"},
     "data": {
-      "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/main/Assignment2/JS/SA3_2021_AUST_GDA94.json",
+      "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/main/Assignment2/JS/new_SA3_2021_AUST_GDA94.json",
       "format": {"type": "topojson", "feature": "SA3_2021_AUST_GDA94"}
     },
     "transform": [
