@@ -15,7 +15,7 @@ Iran,Skilled,24576
 Nepal,Skilled,38353
 Thailand,Skilled,7771
 Indonesia,Skilled,25905
-United States of America,Skilled,16327
+USA,Skilled,16327
 Ireland,Skilled,28842
 Bangladesh,Skilled,26663
 Scotland,Skilled,24010
@@ -35,7 +35,7 @@ Iran,Family,7308
 Nepal,Family,7415
 Thailand,Family,34378
 Indonesia,Family,21039
-United States of America,Family,27322
+USA,Family,27322
 Ireland,Family,10422
 Bangladesh,Family,8466
 Scotland,Family,8315
@@ -55,7 +55,7 @@ Iran,Humanitarian,17257
 Nepal,Humanitarian,3373
 Thailand,Humanitarian,5769
 Indonesia,Humanitarian,569
-United States of America,Humanitarian,39
+USA,Humanitarian,39
 Ireland,Humanitarian,0
 Bangladesh,Humanitarian,670
 Scotland,Humanitarian,0
