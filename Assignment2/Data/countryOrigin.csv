@@ -1,61 +1,61 @@
-﻿Country,Visa Type,Count,,,,,
-India,Skilled," 356,124 ",,,,,
-China,Skilled," 196,461 ",,,,,
-England,Skilled," 197,334 ",,,,,
-Philippines,Skilled," 103,194 ",,,,,
-South Africa,Skilled," 101,342 ",,,,,
-Vietnam,Skilled," 20,515 ",,,,,
-Iraq,Skilled," 1,589 ",,,,,
-Malaysia,Skilled," 51,995 ",,,,,
-Sri Lanka,Skilled," 48,289 ",,,,,
-Pakistan,Skilled," 38,961 ",,,,,
-South Korea,Skilled," 40,682 ",,,,,
-Afghanistan,Skilled, 321 ,,,,,
-Iran,Skilled," 24,576 ",,,,,
-Nepal,Skilled," 38,353 ",,,,,
-Thailand,Skilled," 7,771 ",,,,,
-Indonesia,Skilled," 25,905 ",,,,,
-United States of America,Skilled," 16,327 ",,,,,
-Ireland,Skilled," 28,842 ",,,,,
-Bangldesh,Skilled," 26,663 ",,,,,
-Scotland,Skilled," 24,010 ",,,,,
-India,Family," 81,898 ",,,,,
-China,Family," 133,043 ",,,,,
-England,Family," 79,669 ",,,,,
-Philippines,Family," 63,986 ",,,,,
-South Africa,Family," 16,747 ",,,,,
-Vietnam,Family," 61,484 ",,,,,
-Iraq,Family," 8,735 ",,,,,
-Malaysia,Family," 15,192 ",,,,,
-Sri Lanka,Family," 14,740 ",,,,,
-Pakistan,Family," 17,687 ",,,,,
-South Korea,Family," 18,742 ",,,,,
-Afghanistan,Family," 18,864 ",,,,,
-Iran,Family," 7,308 ",,,,,
-Nepal,Family," 7,415 ",,,,,
-Thailand,Family," 34,378 ",,,,,
-Indonesia,Family," 21,039 ",,,,,
-United States of America,Family," 27,322 ",,,,,
-Ireland,Family," 10,422 ",,,,,
-Bangldesh,Family," 8,466 ",,,,,
-Scotland,Family," 8,315 ",,,,,
-India,Humanitarian," 1,679 ",,,,,
-China,Humanitarian," 5,318 ",,,,,
-England,Humanitarian, 71 ,,,,,
-Philippines,Humanitarian, 173 ,,,,,
-South Africa,Humanitarian, 138 ,,,,,
-Vietnam,Humanitarian, 405 ,,,,,
-Iraq,Humanitarian," 62,362 ",,,,,
-Malaysia,Humanitarian," 2,011 ",,,,,
-Sri Lanka,Humanitarian," 4,674 ",,,,,
-Pakistan,Humanitarian," 6,626 ",,,,,
-South Korea,Humanitarian, 59 ,,,,,
-Afghanistan,Humanitarian," 30,663 ",,,,,
-Iran,Humanitarian," 17,257 ",,,,,
-Nepal,Humanitarian," 3,373 ",,,,,
-Thailand,Humanitarian," 5,769 ",,,,,
-Indonesia,Humanitarian, 569 ,,,,,
-United States of America,Humanitarian, 39 ,,,,,
-Ireland,Humanitarian, -   ,,,,,
-Bangldesh,Humanitarian, 670 ,,,,,
-Scotland,Humanitarian, -   ,,,,,
+Country,Visa Type,Count
+India,Skilled,356124
+China,Skilled,196461
+England,Skilled,197334
+Philippines,Skilled,103194
+South Africa,Skilled,101342
+Vietnam,Skilled,20515
+Iraq,Skilled,1589
+Malaysia,Skilled,51995
+Sri Lanka,Skilled,48289
+Pakistan,Skilled,38961
+South Korea,Skilled,40682
+Afghanistan,Skilled,321
+Iran,Skilled,24576
+Nepal,Skilled,38353
+Thailand,Skilled,7771
+Indonesia,Skilled,25905
+United States of America,Skilled,16327
+Ireland,Skilled,28842
+Bangladesh,Skilled,26663
+Scotland,Skilled,24010
+India,Family,81898
+China,Family,133043
+England,Family,79669
+Philippines,Family,63986
+South Africa,Family,16747
+Vietnam,Family,61484
+Iraq,Family,8735
+Malaysia,Family,15192
+Sri Lanka,Family,14740
+Pakistan,Family,17687
+South Korea,Family,18742
+Afghanistan,Family,18864
+Iran,Family,7308
+Nepal,Family,7415
+Thailand,Family,34378
+Indonesia,Family,21039
+United States of America,Family,27322
+Ireland,Family,10422
+Bangladesh,Family,8466
+Scotland,Family,8315
+India,Humanitarian,1679
+China,Humanitarian,5318
+England,Humanitarian,71
+Philippines,Humanitarian,173
+South Africa,Humanitarian,138
+Vietnam,Humanitarian,405
+Iraq,Humanitarian,62362
+Malaysia,Humanitarian,2011
+Sri Lanka,Humanitarian,4674
+Pakistan,Humanitarian,6626
+South Korea,Humanitarian,59
+Afghanistan,Humanitarian,30663
+Iran,Humanitarian,17257
+Nepal,Humanitarian,3373
+Thailand,Humanitarian,5769
+Indonesia,Humanitarian,569
+United States of America,Humanitarian,39
+Ireland,Humanitarian,0
+Bangladesh,Humanitarian,670
+Scotland,Humanitarian,0
