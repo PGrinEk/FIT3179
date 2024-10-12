@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
   
   <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="CSS/Styles.css" media="all">
+  <link rel="stylesheet" type="text/css" href="Assignment2/CSS/Styles.css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@
                 <div id="vis1" class="vis-container-map" align="center"></div>
             </div>
             <div class="pure-u-1-1">
-                <div class="description description-left">
+                <div class="description description">
                     <p align="center">The above choropleth map shows the distribution of permanent migrants across Australia. The areas that are shown
                       are known as <b>Statistical Area Level 3</b> areas used by the ABS. These locations represent regional areas such as Alice Springs and Monash, 
                       which help to gain better understanding of these areas using Census data. These areas normally <b>contain between 30,000 to 130,000 people</b>.
@@ -124,11 +124,11 @@
     </div> <!-- end page -->
 
     <script type="text/javascript">
-        var specVis1 = "JS/Choropleth_map.vg.json";
-        var specVis2 = "JS/maleFemaleVisaBarChart.json";
-        var specVis3 = "JS/AgeGroupBarChart.json";
-        var specVis4 = "JS/totalVisaTypeTime.json";
-        var specVis5 = "JS/countryofOrigin.json";
+        var specVis1 = "Assignment2/JS/Choropleth_map.vg.json";
+        var specVis2 = "Assignment2/JS/maleFemaleVisaBarChart.json";
+        var specVis3 = "Assignment2/JS/AgeGroupBarChart.json";
+        var specVis4 = "Assignment2/JS/totalVisaTypeTime.json";
+        var specVis5 = "Assignment2/JS/countryofOrigin.json";
 
         vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
         }).catch(console.error);
