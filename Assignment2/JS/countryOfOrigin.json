@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 450,
+    "height": 254,
+    "data": {
+        "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/refs/heads/main/Assignment2/Data/countryOrigin.csv"
+    },
+    "transform": [
+      {
+        "aggregate": [{"op": "sum", "field": "Count", "as": "Count"}],
+        "groupby": ["Visa Type", "Country"]
+      }
+    ],
+    "encoding": {
+      "y": {"field": "Visa Type", "type": "nominal"},
+      "x": {"field": "Country", "type": "nominal"}
+    },
+    "layer": [
+      {
+        "mark": "rect",
+        "encoding": {
+          "color": {
+            "field": "Count",
+            "type": "quantitative",
+            "title": "Count Migrants",
+            "scale": {
+                "domain": [0, 100000], 
+                "range": ["#f7fcfd", "#00441b"]
+              },
+            "legend": {"direction": "vertical", "gradientLength": 120}
+          },
+          "tooltip": [
+            {"field": "Visa Type", "type": "nominal", "title": "Visa Type"},
+            {"field": "Country", "type": "nominal", "title": "Country"},
+            {"field": "Count", "type": "quantitative", "title": "Migrants", "format": ",.0f"}
+        ]
+        }
+      }
+    ],
+    "config": {
+      "axis": {"grid": true, "tickBand": "extent"}
+    }
+}

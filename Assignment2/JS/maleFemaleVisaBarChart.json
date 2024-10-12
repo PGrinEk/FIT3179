@@ -1,90 +1,91 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 450,
-  "height": 300,
-  "data": {
-    "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/refs/heads/main/Assignment2/Data/genderVisaType.csv"
-  },
-  "transform": [
-    {
-      "filter": {
-        "selection": "genderSelect"
-      }
-    }
-  ],
-  "layer": [
-    {
-      "mark": {
-        "type": "bar",
-        "width": 35
-      },
-      "params":[
-        {
-          "name": "genderSelect",
-          "select": {"type": "point", "fields": ["Gender"]},
-          "bind": "legend"
-        }
-      ],
-      "encoding": {
-        "x": {
-          "field": "Visa",
-          "type": "nominal",
-          "axis": {"labelAngle": 0},
-          "title": "Visa Type"
-        },
-        "y": {
-          "field": "Percentage",
-          "type": "quantitative",
-          "title": "%",
-          "scale": {
-            "domain": [0, 70]
-          }
-        },
-        "color": {
-          "field": "Gender",
-          "type": "nominal",
-          "scale": {
-            "domain": ["Male", "Female"],
-            "range": ["#006d2c", "#bae4b3"]
-          },
-          "title": "Gender"
-        },
-        "xOffset": {
-          "field": "Gender",
-          "type": "nominal"
-        },
-        "tooltip": [
-          {"field": "Gender", "type": "nominal", "title": "Gender"},
-          {"field": "Count", "type": "quantitative", "title": "Num Migrants"},
-          {"field": "Percentage", "type": "quantitative", "title": "%"}
-        ]
-      }
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 450,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/refs/heads/main/Assignment2/Data/genderVisaType.csv"
     },
-    {
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "dy": -5
-      },
-      "encoding": {
-        "text": {
-          "field": "Percentage",
-          "type": "quantitative",
-          "format": ".1f"
-        },
-        "x": {
-          "field": "Visa",
-          "type": "nominal"
-        },
-        "y": {
-          "field": "Percentage",
-          "type": "quantitative"
-        },
-        "xOffset": {
-          "field": "Gender",
-          "type": "nominal"
+    "transform": [
+      {
+        "filter": {
+          "selection": "genderSelect"
         }
       }
-    }
-  ]
+    ],
+    "layer": [
+      {
+        "mark": {
+          "type": "bar",
+          "width": 35
+        },
+        "params":[
+          {
+            "name": "genderSelect",
+            "select": {"type": "point", "fields": ["Gender"]},
+            "bind": "legend"
+          }
+        ],
+        "encoding": {
+          "x": {
+            "field": "Visa",
+            "type": "nominal",
+            "axis": {"labelAngle": 0},
+            "title": "Visa Type"
+          },
+          "y": {
+            "field": "Percentage",
+            "type": "quantitative",
+            "title": "%",
+            "scale": {
+              "domain": [0, 70]
+            }
+          },
+          "color": {
+            "field": "Gender",
+            "type": "nominal",
+            "scale": {
+              "domain": ["Male", "Female"],
+              "range": ["#99d8c9", "#238b45"]
+            },
+            "title": "Gender"
+          },
+          "xOffset": {
+            "field": "Gender",
+            "type": "nominal"
+          },
+          "tooltip": [
+            {"field": "Gender", "type": "nominal", "title": "Gender"},
+            {"field": "Count", "type": "quantitative", "title": "Num Migrants", "format": ",.0f"},
+            {"field": "Percentage", "type": "quantitative", "title": "%"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "fontSize": 13,
+          "dy": -10
+        },
+        "encoding": {
+          "text": {
+            "field": "Percentage",
+            "type": "quantitative",
+            "format": ".1f"
+          },
+          "x": {
+            "field": "Visa",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Percentage",
+            "type": "quantitative"
+          },
+          "xOffset": {
+            "field": "Gender",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
 }
+  

@@ -2,10 +2,47 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 1000,
     "height": 500,
-    "projection": {"type": "mercator"},
     "data": {
       "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/refs/heads/main/Assignment2/JS/new_SA3_2021_AUST_GDA94.json",
       "format": {"type": "topojson", "feature": "SA3_2021_AUST_GDA94"}
+    },
+    "params": [
+      {
+        "name": "zoom_level",
+        "value": 800,
+        "bind": {
+          "input": "range",
+          "min": 800,
+          "max": 60000,
+          "step": 100,
+          "name": "Zoom: "
+        }
+      },
+      {
+        "name": "center_to",
+        "value": [132.08, -27],
+        "bind": {
+          "input": "select",
+          "options": [
+            [132.08, -23.07],
+            [145, -37.95],
+            [151.2093, -33.8688],
+            [153.0260, -27.4705],
+            [149.1310, -35.2802],
+            [138.6007, -34.9285],
+            [115.8617, -31.9514],
+            [130.8444, -12.4637],
+            [147.3257, -42.8826]
+          ],
+          "labels": ["Center of Australia", "Melbourne", "Sydney", "Brisbane", "Canberra", "Adelaide", "Perth", "Darwin", "Hobart"],
+          "name": "Map Centre: "
+        }
+      }
+    ],
+    "projection": {
+      "type": "equirectangular",
+      "center": {"expr": "center_to"},
+      "scale": {"expr": "zoom_level"}
     },
     "transform": [
       {
@@ -48,25 +85,10 @@
         "encoding": {
           "color": {
             "value": "transparent" 
-          }
-        }
-      },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/refs/heads/main/Assignment2/Data/state_pop.csv"
-        },
-        "mark": "circle",
-        "encoding": {
-          "longitude": {"field": "Longitude", "type": "quantitative"},
-          "latitude": {"field": "Latitude", "type": "quantitative"},
-          "size": {
-            "field": "Total",
-            "type": "quantitative",
-            "scale": {"range": [10, 1000]}  
           },
           "tooltip": [
-            {"field": "State", "type": "nominal", "title": "State"},
-            {"field": "Total", "type": "quantitative", "title": "Total Migrants"}
+            {"field": "properties.SA3_NAME21", "type": "nominal", "title": "Area"},
+            {"field": "popPer10k", "type": "quantitative", "title": "Migrants per 10k"}
           ]
         }
       }

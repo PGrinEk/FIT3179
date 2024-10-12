@@ -55,11 +55,10 @@
           },
           "tooltip": [
             {"field": "Age Group", "type": "nominal", "title": "Age Group"},
-            {"field": "Count", "type": "quantitative", "title": "Num Migrants"},
+            {"field": "Count", "type": "quantitative", "title": "Num Migrants", "format": ",.0f"},
             {"field": "Percentage", "type": "quantitative", "title": "%"}
           ]
         }
       }
     ]
 }
-  
