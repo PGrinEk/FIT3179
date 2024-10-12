@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 400,
+    "width": 1000,
+    "height": 500,
     "projection": {"type": "mercator"},
     "data": {
-      "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/main/Assignment2/JS/new_SA3_2021_AUST_GDA94.json",
+      "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/refs/heads/main/Assignment2/JS/new_SA3_2021_AUST_GDA94.json",
       "format": {"type": "topojson", "feature": "SA3_2021_AUST_GDA94"}
     },
     "transform": [
@@ -15,25 +15,60 @@
             "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/main/Assignment2/Data/SA3%20Table.csv"
           },
           "key": "SA3 Names",
-          "fields": ["Total"]
+          "fields": ["popPer10k"]
         }
       },
-      {"calculate": "datum.Total", "as": "Total Permanent Migrants"}
+      {"calculate": "datum.popPer10k", "as": "Migrants per 10,000 Population"}
     ],
-    "mark": {"type": "geoshape"},
-    "encoding": {
-      "color": {
-        "field": "Total Permanent Migrants",
-        "type": "quantitative",
-        "scale": {
+    "layer": [
+      {
+        "mark": {"type": "geoshape"},
+        "encoding": {
+          "color": {
+            "field": "Migrants per 10,000 Population",
+            "type": "quantitative",
+            "scale": {
               "type": "threshold",
-              "domain": [1000, 5000, 10000, 15000, 20000],
-              "range": ["#ccece6", "#99d8c9", "#66c2a4", "#41ae76", "#238b45"]
+              "domain": [400, 800, 1200, 1600, 2000],
+              "range": ["#ccece6", "#99d8c9", "#66c2a4", "#41ae76", "#238b45", "#00441b"]
+            }
+          },
+          "tooltip": [
+            {"field": "properties.SA3_NAME21", "type": "nominal", "title": "Area"},
+            {"field": "popPer10k", "type": "quantitative", "title": "Migrants per 10k"}
+          ]
         }
       },
-      "tooltip": [
-        {"field": "properties.SA3_NAME21", "type": "nominal", "title": "Area"},
-        {"field": "Total", "type": "quantitative", "title": "Total Migrants"}
-      ]
-    }
-  }
+      {
+        "mark": {
+          "type": "geoshape",
+          "stroke": "black", 
+          "strokeWidth": 0.1 
+        },
+        "encoding": {
+          "color": {
+            "value": "transparent" 
+          }
+        }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/PGrinEk/FIT3179/refs/heads/main/Assignment2/Data/state_pop.csv"
+        },
+        "mark": "circle",
+        "encoding": {
+          "longitude": {"field": "Longitude", "type": "quantitative"},
+          "latitude": {"field": "Latitude", "type": "quantitative"},
+          "size": {
+            "field": "Total",
+            "type": "quantitative",
+            "scale": {"range": [10, 1000]}  
+          },
+          "tooltip": [
+            {"field": "State", "type": "nominal", "title": "State"},
+            {"field": "Total", "type": "quantitative", "title": "Total Migrants"}
+          ]
+        }
+      }
+    ]
+}
