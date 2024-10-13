@@ -22,7 +22,7 @@
           "color": {
             "field": "Count",
             "type": "quantitative",
-            "title": "Count Migrants",
+            "title": "Total Migrants",
             "scale": {
                 "domain": [0, 100000], 
                 "range": ["#f7fcfd", "#00441b"]
